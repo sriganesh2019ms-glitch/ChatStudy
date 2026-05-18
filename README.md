@@ -76,14 +76,46 @@ Client-server chat applications are foundational to real-time communication over
 ##PROGRAM
 
 client:
-<img width="895" height="568" alt="WhatsApp Image 2026-05-18 at 12 52 47" src="https://github.com/user-attachments/assets/08836dea-c775-4938-9f12-c241537d36b6" />
+
+import socket
+from datetime import datetime
+s = socket.socket()
+s.bind(('localhost', 6000))
+s.listen(5)
+c, addr = s.accept()
+print("Client Address : ", addr)
+now = datetime.now()
+c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
+ack = c.recv(1024).decode()
+if ack:
+    print(ack)
+c.close()
+
 
 server:
-<img width="900" height="670" alt="image" src="https://github.com/user-attachments/assets/39e35f02-e829-4c69-9ed5-1d79ec8874e4" />
+
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+print(s.getsockname())
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
 
 
-output:
-<img width="832" height="217" alt="WhatsApp Image 2026-05-18 at 12 49 33" src="https://github.com/user-attachments/assets/07247808-8e5a-4a3c-8a8d-ef1a60f5fddd" />
+
+## output:
+
+
+<img width="802" height="424" alt="image" src="https://github.com/user-attachments/assets/7f24e6dc-942c-46b6-a4f5-419a7f992c6a" />
+
+<img width="923" height="291" alt="image" src="https://github.com/user-attachments/assets/d9060701-d9b8-4267-9b3d-1d5c011361b8" />
+
+
+<img width="800" height="197" alt="image" src="https://github.com/user-attachments/assets/2ce17b49-ac73-4fec-b65e-70c175415b1f" />
+
+
+
+
 
 
 
