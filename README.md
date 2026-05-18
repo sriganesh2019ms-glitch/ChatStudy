@@ -111,7 +111,11 @@ s.send("acknowledgement recived from the server".encode())
 <img width="923" height="291" alt="image" src="https://github.com/user-attachments/assets/d9060701-d9b8-4267-9b3d-1d5c011361b8" />
 
 
-<img width="800" height="197" alt="image" src="https://github.com/user-attachments/assets/2ce17b49-ac73-4fec-b65e-70c175415b1f" />
+<img width="598" height="120" alt="image" src="https://github.com/user-attachments/assets/64642036-c34d-47c1-a46d-750c89c7e46c" />
+
+
+<img width="503" height="123" alt="image" src="https://github.com/user-attachments/assets/1eb37002-a2f7-44c8-a600-e2ba7ed2457a" />
+
 
 
 
