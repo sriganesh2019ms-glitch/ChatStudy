@@ -77,45 +77,19 @@ Client-server chat applications are foundational to real-time communication over
 
 client:
 
-import socket
-from datetime import datetime
-s = socket.socket()
-s.bind(('localhost', 6000))
-s.listen(5)
-c, addr = s.accept()
-print("Client Address : ", addr)
-now = datetime.now()
-c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
-ack = c.recv(1024).decode()
-if ack:
-    print(ack)
-c.close()
-
+<img width="997" height="649" alt="image" src="https://github.com/user-attachments/assets/1d31a720-42a1-46f9-8052-dac284c2f3f8" />
+<img width="891" height="631" alt="image" src="https://github.com/user-attachments/assets/fba696b3-b20e-4b31-a657-38dea72ed433" />
 
 server:
 
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-print(s.getsockname())
-print(s.recv(1024).decode())
-s.send("acknowledgement recived from the server".encode())
-
-
+<img width="997" height="649" alt="image" src="https://github.com/user-attachments/assets/1d31a720-42a1-46f9-8052-dac284c2f3f8" />
 
 ## output:
 
 
-<img width="802" height="424" alt="image" src="https://github.com/user-attachments/assets/7f24e6dc-942c-46b6-a4f5-419a7f992c6a" />
+<img width="774" height="182" alt="image" src="https://github.com/user-attachments/assets/338dba7d-ace6-47ba-a1d6-d8de0188f0b7" />
 
-<img width="923" height="291" alt="image" src="https://github.com/user-attachments/assets/d9060701-d9b8-4267-9b3d-1d5c011361b8" />
-
-
-<img width="598" height="120" alt="image" src="https://github.com/user-attachments/assets/64642036-c34d-47c1-a46d-750c89c7e46c" />
-
-
-<img width="503" height="123" alt="image" src="https://github.com/user-attachments/assets/1eb37002-a2f7-44c8-a600-e2ba7ed2457a" />
-
+<img width="764" height="176" alt="image" src="https://github.com/user-attachments/assets/6bcfd5cb-281e-46db-a18f-bdf07ebe3ec9" />
 
 
 
